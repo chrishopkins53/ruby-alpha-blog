@@ -1241,3 +1241,65 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/articles" for ::1 at 2019-11-15 07:32:45 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 83.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-11-15 07:32:48 +0000
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1/edit" for ::1 at 2019-11-15 07:32:51 +0000
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:47
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (153.9ms)
+  Rendered articles/edit.html.erb within layouts/application (156.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 215ms (Views: 209.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2019-11-15 07:32:52 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 82ms (Views: 76.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-11-15 07:32:54 +0000
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (9.5ms)
+  Rendered articles/new.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2019-11-15 07:32:55 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.3ms)
+
+
