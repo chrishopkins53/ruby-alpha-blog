@@ -1,3 +1,14 @@
-$navbar-default-bg: #08088A;
+@import 'bootstrap/dist/css/bootstrap';
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.navbar {
+    background-color: #FDF6EA !important;
+}
+
+.navbar-brand {
+    font-size: 3rem;
+}
+
+h1 {
+    color: red;
+}
