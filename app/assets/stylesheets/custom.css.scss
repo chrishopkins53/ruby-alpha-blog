@@ -1,14 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import "bootstrap-sprockets";
 @import "bootstrap";
-.navbar {
-    background-color: #FDF6EA !important;
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
 }
 
-.navbar-brand {
-    font-size: 3rem;
+#logo:hover {
+    color: #0000008f;
+    text-decoration: none;
 }
 
-h1 {
-    color: red;
+.center {
+    text-align: center;
 }
