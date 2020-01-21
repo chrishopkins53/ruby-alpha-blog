@@ -187,3 +187,2150 @@ CategoryTest: test_name_should_not_be_too_long
 ----------------------------------------------
   [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:49:45.364800"], ["updated_at", "2020-01-21 10:49:45.364800"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:49:45.404792"], ["updated_at", "2020-01-21 10:49:45.404792"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:49:45.426170"], ["updated_at", "2020-01-21 10:49:45.426170"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:49:45.476059"], ["updated_at", "2020-01-21 10:49:45.476059"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:51:44.286044"], ["updated_at", "2020-01-21 10:51:44.286044"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:51:44.738623"], ["updated_at", "2020-01-21 10:51:44.738623"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:51:44.771446"], ["updated_at", "2020-01-21 10:51:44.771446"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:51:44.847292"], ["updated_at", "2020-01-21 10:51:44.847292"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:52:38.069148"], ["updated_at", "2020-01-21 10:52:38.069148"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 10:52:38 +0000
+Processing by CategoriesController#new as HTML
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:52:38.142589"], ["updated_at", "2020-01-21 10:52:38.142589"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 10:52:38 +0000
+Processing by CategoriesController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:52:38.151299"], ["updated_at", "2020-01-21 10:52:38.151299"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 10:52:38 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:52:38.167503"], ["updated_at", "2020-01-21 10:52:38.167503"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:54:38.520283"], ["updated_at", "2020-01-21 10:54:38.520283"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 10:54:38 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 10268ms (Views: 10263.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:54:48.839054"], ["updated_at", "2020-01-21 10:54:48.839054"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 10:54:48 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:54:48.847684"], ["updated_at", "2020-01-21 10:54:48.847684"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 10:54:48 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 10:54:48.860307"], ["updated_at", "2020-01-21 10:54:48.860307"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:09:24.052018"], ["updated_at", "2020-01-21 11:09:24.052018"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:09:24 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 346ms (Views: 340.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:09:24.480841"], ["updated_at", "2020-01-21 11:09:24.480841"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:09:24 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:09:24.492787"], ["updated_at", "2020-01-21 11:09:24.492787"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:09:24 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:09:24.501598"], ["updated_at", "2020-01-21 11:09:24.501598"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:09:24 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:11:42 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 299ms (Views: 292.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:11:43.309412"], ["updated_at", "2020-01-21 11:11:43.309412"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:11:43 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:11:43.317931"], ["updated_at", "2020-01-21 11:11:43.317931"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:11:43 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:11:43.324327"], ["updated_at", "2020-01-21 11:11:43.324327"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:11:43 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:11:43.348479"], ["updated_at", "2020-01-21 11:11:43.348479"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:14:22 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 222ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:14:22 +0000
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:14:22.703469"], ["updated_at", "2020-01-21 11:14:22.703469"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:14:22 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:14:22.710173"], ["updated_at", "2020-01-21 11:14:22.710173"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:14:22 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:14:22.716995"], ["updated_at", "2020-01-21 11:14:22.716995"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:14:22 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:14:22.726383"], ["updated_at", "2020-01-21 11:14:22.726383"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:15:04.392250"], ["updated_at", "2020-01-21 11:15:04.392250"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:15:04 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 215ms (Views: 209.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:15:04 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+No template found for CategoriesController#create, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:15:04.739750"], ["updated_at", "2020-01-21 11:15:04.739750"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:15:04 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:15:04.747159"], ["updated_at", "2020-01-21 11:15:04.747159"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:15:04 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:15:04.754640"], ["updated_at", "2020-01-21 11:15:04.754640"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:15:04 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:21:30.567643"], ["updated_at", "2020-01-21 11:21:30.567643"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:21:30 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (3.4ms)
+  Rendered categories/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:21:30.696707"], ["updated_at", "2020-01-21 11:21:30.696707"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:21:30 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 267ms (Views: 265.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:21:30.968713"], ["updated_at", "2020-01-21 11:21:30.968713"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:21:30 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered categories/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:21:30.976814"], ["updated_at", "2020-01-21 11:21:30.976814"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:21:30 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:22:04.711691"], ["updated_at", "2020-01-21 11:22:04.711691"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:22:04 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered categories/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 261ms (Views: 255.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:22:05 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+No template found for CategoriesController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:22:05.105552"], ["updated_at", "2020-01-21 11:22:05.105552"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:22:05 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:22:05.111686"], ["updated_at", "2020-01-21 11:22:05.111686"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:22:05 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:22:05.119578"], ["updated_at", "2020-01-21 11:22:05.119578"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:22:05 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:24:59.580076"], ["updated_at", "2020-01-21 11:24:59.580076"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:24:59 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 272ms (Views: 267.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:24:59.893361"], ["updated_at", "2020-01-21 11:24:59.893361"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:24:59 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered categories/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:24:59.908535"], ["updated_at", "2020-01-21 11:24:59.908535"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:24:59 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:24:59 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:24:59 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:24:59.929068"], ["updated_at", "2020-01-21 11:24:59.929068"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:24:59 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:24:59.942133"], ["updated_at", "2020-01-21 11:24:59.942133"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:26:04 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 287ms (Views: 274.1ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:26:04 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:04.378126"], ["updated_at", "2020-01-21 11:26:04.378126"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:26:04 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:04.393436"], ["updated_at", "2020-01-21 11:26:04.393436"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:04.399605"], ["updated_at", "2020-01-21 11:26:04.399605"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:26:04 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:04.410126"], ["updated_at", "2020-01-21 11:26:04.410126"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:26:04 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:04.417412"], ["updated_at", "2020-01-21 11:26:04.417412"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:26:04 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:46.280295"], ["updated_at", "2020-01-21 11:26:46.280295"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:46.354860"], ["updated_at", "2020-01-21 11:26:46.354860"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:26:46 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 279ms (Views: 273.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:46.676284"], ["updated_at", "2020-01-21 11:26:46.676284"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:26:46 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:46.684512"], ["updated_at", "2020-01-21 11:26:46.684512"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:26:46 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:26:46 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:26:46 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:26:46.705782"], ["updated_at", "2020-01-21 11:26:46.705782"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:26:46 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:33:58.849952"], ["updated_at", "2020-01-21 11:33:58.849952"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:33:58.919945"], ["updated_at", "2020-01-21 11:33:58.919945"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:33:58 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 262ms (Views: 257.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:33:59.227550"], ["updated_at", "2020-01-21 11:33:59.227550"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:33:59.236194"], ["updated_at", "2020-01-21 11:33:59.236194"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered categories/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:33:59.260124"], ["updated_at", "2020-01-21 11:33:59.260124"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CreateCategoriesTest: test_invalid_category_submission_results_in_failure
+-------------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:33:59 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>" "}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (3.0ms)
+  Rendered categories/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:36:14.888078"], ["updated_at", "2020-01-21 11:36:14.888078"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:36:14 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 277ms (Views: 273.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:36:15.195022"], ["updated_at", "2020-01-21 11:36:15.195022"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:36:15.201154"], ["updated_at", "2020-01-21 11:36:15.201154"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered categories/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:36:15.214720"], ["updated_at", "2020-01-21 11:36:15.214720"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:36:15.230325"], ["updated_at", "2020-01-21 11:36:15.230325"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CreateCategoriesTest: test_invalid_category_submission_results_in_failure
+-------------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:36:15 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>" "}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.6ms)
+  Rendered categories/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered categories/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 266ms (Views: 256.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:58:21.672045"], ["updated_at", "2020-01-21 11:58:21.672045"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CreateCategoriesTest: test_invalid_category_submission_results_in_failure
+-------------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>" "}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:58:21.693205"], ["updated_at", "2020-01-21 11:58:21.693205"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:58:21.699158"], ["updated_at", "2020-01-21 11:58:21.699158"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:58:21.707459"], ["updated_at", "2020-01-21 11:58:21.707459"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 11:58:21.712882"], ["updated_at", "2020-01-21 11:58:21.712882"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 11:58:21 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:08:45.423824"], ["updated_at", "2020-01-21 12:08:45.423824"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered categories/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 255ms (Views: 251.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:08:45.784902"], ["updated_at", "2020-01-21 12:08:45.784902"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CreateCategoriesTest: test_invalid_category_submission_results_in_failure
+-------------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>" "}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:08:45.802787"], ["updated_at", "2020-01-21 12:08:45.802787"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:08:45.808653"], ["updated_at", "2020-01-21 12:08:45.808653"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:08:45.814984"], ["updated_at", "2020-01-21 12:08:45.814984"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:08:45 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 265ms (Views: 254.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:35.538636"], ["updated_at", "2020-01-21 12:10:35.538636"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CreateCategoriesTest: test_invalid_category_submission_results_in_failure
+-------------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>" "}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:35.557566"], ["updated_at", "2020-01-21 12:10:35.557566"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:35.563688"], ["updated_at", "2020-01-21 12:10:35.563688"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:35.571896"], ["updated_at", "2020-01-21 12:10:35.571896"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 12:10:35 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:35.584838"], ["updated_at", "2020-01-21 12:10:35.584838"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+CreateCategoriesTest: test_invalid_category_submission_results_in_failure
+-------------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered categories/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 283ms (Views: 274.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>" "}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered categories/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+CreateCategoriesTest: test_get_new_category_form_and_create_category
+--------------------------------------------------------------------
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"name"=>"sports"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:51.646735"], ["updated_at", "2020-01-21 12:10:51.646735"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoryTest: test_name_should_not_be_too_long
+----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CategoryTest: test_name_should_not_be_too_short
+-----------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CategoryTest: test_name_should_be_present
+-----------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", " "], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CategoryTest: test_name_should_be_unique
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:51.658582"], ["updated_at", "2020-01-21 12:10:51.658582"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CategoryTest: test_category_should_be_valid
+-------------------------------------------
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CategoriesControllerTest: test_should_get_show
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:51.663174"], ["updated_at", "2020-01-21 12:10:51.663174"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/1" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+CategoriesControllerTest: test_should_get_categories_index
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:51.670850"], ["updated_at", "2020-01-21 12:10:51.670850"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CategoriesControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "sports"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sports"], ["created_at", "2020-01-21 12:10:51.675955"], ["updated_at", "2020-01-21 12:10:51.675955"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/new" for 127.0.0.1 at 2020-01-21 12:10:51 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m

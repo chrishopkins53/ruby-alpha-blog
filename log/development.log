@@ -8868,3 +8868,142 @@ Migrating to CreateCategories (20200121102705)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-01-21 11:20:25 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hopkinc4/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 24ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for ::1 at 2020-01-21 11:20:25 +0000
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:11
+  Rendered articles/_article.html.erb (16.8ms)
+  Rendered articles/index.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 498ms (Views: 486.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories" for ::1 at 2020-01-21 11:20:33 +0000
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for ::1 at 2020-01-21 11:20:38 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.9ms)
+  Rendered categories/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if obj.errors.any? %>
+    2:   <div class="row">
+    3:     <div class="col-xs-8 col-xs-offset-2">
+    4:       <div class="panel panel-danger">
+  
+app/views/shared/_errors.html.erb:1:in `_app_views_shared__errors_html_erb___1726495730965591567_70113339981080'
+app/views/categories/new.html.erb:3:in `_app_views_categories_new_html_erb__1774937929806184434_70112967417280'
+Started GET "/categories/new" for ::1 at 2020-01-21 11:21:57 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered categories/new.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered layouts/_navigation.html.erb (10.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 56.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/new" for ::1 at 2020-01-21 12:10:56 +0000
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered articles/_form.html.erb (19.1ms)
+  Rendered articles/new.html.erb within layouts/application (26.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 103ms (Views: 63.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/articles" for ::1 at 2020-01-21 12:10:58 +0000
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OLh4gRj0Uyws0AFNznmM+OLH0vQL5xSowmh7IAlIDWz2o8Va9rMVxjqyOEGfpSB4gd3dzvLXmX7Ac4RlmcmDBA==", "article"=>{"title"=>"", "description"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered articles/_form.html.erb (3.8ms)
+  Rendered articles/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for ::1 at 2020-01-21 12:11:13 +0000
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered categories/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/categories" for ::1 at 2020-01-21 12:11:15 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VgZJ67EnynSjqrcZCCMptFCg8Avwx44C/WBpi+3rbbynoIrF+ElC+epaUNPWjkuvL40e84t3k7mSSb38ACpnyQ==", "category"=>{"name"=>""}, "commit"=>"Create Category"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:13
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:13
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
