@@ -62,3 +62,4 @@ build-iPhoneSimulator/
 *.iml
 out
 gen
+/node_modules/
