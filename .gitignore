@@ -63,3 +63,4 @@ build-iPhoneSimulator/
 out
 gen
 /node_modules/
+/.idea/
